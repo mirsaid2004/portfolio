@@ -1,0 +1,77 @@
+{
+  "HomePage": {
+    "title": "Project Blank 2026",
+    "description": "A high-end, immersive portfolio.",
+    "intro": "Hi, I’m Antigravity, a Frontend Engineer building immersive digital experiences.",
+    "viewWork": "View My Work"
+  },
+  "NotFound": {
+    "title": "404",
+    "subtitle": "Page Not Found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "backHome": "Return Home"
+  },
+  "ContactPage": {
+    "eyebrow": "GET IN TOUCH",
+    "titleStart": "Let's build the",
+    "titleHighlight": "future",
+    "titleEnd": "together.",
+    "description": "I'm currently available for freelance projects and full-time creative engineering roles. Say hello!",
+    "emailLabel": "EMAIL",
+    "locationLabel": "LOCATION",
+    "locationValue": "Global / Remote",
+    "form": {
+      "nameLabel": "FULL NAME",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "EMAIL ADDRESS",
+      "emailPlaceholder": "john@example.com",
+      "subjectLabel": "PROJECT SUBJECT",
+      "subjectPlaceholder": "Select a service",
+      "messageLabel": "MESSAGE",
+      "messagePlaceholder": "How can I help you bring your vision to life?",
+      "submitButton": "Send Message"
+    }
+  },
+  "Navigation": {
+    "home": "Home",
+    "work": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "Bento": {
+    "available": "Available for projects",
+    "techStack": "Core Stack",
+    "globalReady": "Global Ready",
+    "bioTitle": "Philosophy",
+    "bio": "Building high-performance, accessible, and story-driven web applications."
+  },
+  "Error": {
+    "title": "500",
+    "subtitle": "Something Went Wrong",
+    "description": "We encountered an unexpected error. Please try again later.",
+    "retry": "Try Again",
+    "backHome": "Return Home"
+  },
+  "Projects": {
+    "title": "Selected Work",
+    "viewProject": "View Project",
+    "github": "Source Code",
+    "perf": "Performance",
+    "project1": {
+      "title": "E-Commerce V2",
+      "description": "Rebuilt a legacy e-com platform.",
+      "situation": "Legacy code was slowing down conversions.",
+      "task": "Migrate to Next.js and optimize LCP.",
+      "action": "Implemented ISR and optimized images.",
+      "result": "+40% Conversion Rate, 100 Lighthouse Score."
+    },
+    "project2": {
+      "title": "SaaS Dashboard",
+      "description": "Real-time analytics dashboard.",
+      "situation": "Users needed real-time data visualization.",
+      "task": "Build a scalable dashboard with WebSockets.",
+      "action": "Used Recharts and Supabase Realtime.",
+      "result": "Supports 10k+ concurrent connections."
+    }
+  }
+}

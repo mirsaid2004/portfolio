@@ -1,0 +1,77 @@
+{
+  "HomePage": {
+    "title": "Projet Vide 2026",
+    "description": "Un portefeuille immersif haut de gamme.",
+    "intro": "Bonjour, je suis Antigravity, un ingénieur frontend créant des expériences numériques immersives.",
+    "viewWork": "Voir mon travail"
+  },
+  "NotFound": {
+    "title": "404",
+    "subtitle": "Page Non Trouvée",
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "backHome": "Retour à l'accueil"
+  },
+  "ContactPage": {
+    "eyebrow": "CONTACTEZ-MOI",
+    "titleStart": "Construisons le",
+    "titleHighlight": "futur",
+    "titleEnd": "ensemble.",
+    "description": "Je suis actuellement disponible pour des projets freelance et des postes d'ingénieur créatif à temps plein. Dites bonjour !",
+    "emailLabel": "EMAIL",
+    "locationLabel": "LOCALISATION",
+    "locationValue": "Mondial / Télétravail",
+    "form": {
+      "nameLabel": "NOM COMPLET",
+      "namePlaceholder": "Jean Dupont",
+      "emailLabel": "ADRESSE EMAIL",
+      "emailPlaceholder": "jean@exemple.com",
+      "subjectLabel": "SUJET DU PROJET",
+      "subjectPlaceholder": "Sélectionnez un service",
+      "messageLabel": "MESSAGE",
+      "messagePlaceholder": "Comment puis-je vous aider à réaliser votre vision ?",
+      "submitButton": "Envoyer le message"
+    }
+  },
+  "Navigation": {
+    "home": "Accueil",
+    "work": "Projets",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "Bento": {
+    "available": "Disponible pour projets",
+    "techStack": "Pile Technique",
+    "globalReady": "Prêt pour le monde",
+    "bioTitle": "Philosophie",
+    "bio": "Créer des applications web performantes, accessibles et axées sur l'histoire."
+  },
+  "Error": {
+    "title": "500",
+    "subtitle": "Une Erreur est Survenue",
+    "description": "Nous avons rencontré une erreur inattendue. Veuillez réessayer plus tard.",
+    "retry": "Réessayer",
+    "backHome": "Retour à l'accueil"
+  },
+  "Projects": {
+    "title": "Travaux Sélectionnés",
+    "viewProject": "Voir le projet",
+    "github": "Code Source",
+    "perf": "Performance",
+    "project1": {
+      "title": "E-Commerce V2",
+      "description": "Refonte d'une plateforme e-com héritée.",
+      "situation": "Le code hérité ralentissait les conversions.",
+      "task": "Migrer vers Next.js et optimiser le LCP.",
+      "action": "Mise en œuvre de l'ISR et optimisation des images.",
+      "result": "+40% de taux de conversion, Score Lighthouse de 100."
+    },
+    "project2": {
+      "title": "Tableau de bord SaaS",
+      "description": "Tableau de bord d'analyse en temps réel.",
+      "situation": "Les utilisateurs avaient besoin de visualisation de données en temps réel.",
+      "task": "Construire un tableau de bord évolutif avec WebSockets.",
+      "action": "Utilisation de Recharts et Supabase Realtime.",
+      "result": "Supporte 10k+ connexions simultanées."
+    }
+  }
+}
