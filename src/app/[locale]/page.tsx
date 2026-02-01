@@ -1,13 +1,21 @@
-import { Hero } from '@/components/hero';
-import { BentoGrid } from '@/components/bento-grid';
-import { ProjectSection } from '@/components/project-section';
+import { Hero } from "@/components/hero";
+import { ExperienceTimeline } from "@/components/experience-timeline";
+import { TechStackSlider } from "@/components/tech-stack-slider";
+import { ProjectsShowcase } from "@/components/projects-showcase";
+import { NpmContributions } from "@/components/npm-contributions";
+import { AboutStats } from "@/components/about-stats";
+import { ContactForm } from "@/components/contact-form";
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-transparent space-y-24 pb-24">
-        <Hero />
-        <BentoGrid />
-        <ProjectSection />
+      <Hero />
+      <ExperienceTimeline />
+      <TechStackSlider />
+      <ProjectsShowcase />
+      <NpmContributions />
+      <AboutStats />
+      <ContactForm />
     </main>
   );
 }
