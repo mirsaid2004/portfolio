@@ -4,57 +4,48 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Zap, Award, Code2, Sparkles, User } from "lucide-react";
 import { SectionHeader } from "./section-header";
-
-interface StatItem {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
-
-const stats: StatItem[] = [
-  {
-    icon: <Zap size={24} />,
-    title: "Modern Stack",
-    description:
-      "Next.js, Tailwind, TypeScript, and Three.js for high-end web apps.",
-  },
-  {
-    icon: <Award size={24} />,
-    title: "Performance",
-    description:
-      "Optimizing for Core Web Vitals and seamless 60fps interactions.",
-  },
-  {
-    icon: <Code2 size={24} />,
-    title: "System Design",
-    description: "Architecting scalable components and design systems.",
-  },
-  {
-    icon: <Sparkles size={24} />,
-    title: "Motion Design",
-    description: "Crafting meaningful animations that improve user intuition.",
-  },
-];
-
-const experience = {
-  years: "5+",
-  yearsLabel: "YEARS EXPERIENCE",
-  projects: "30+",
-  projectsLabel: "PROJECTS LAUNCHED",
-};
+import { useTranslations } from "next-intl";
 
 export function AboutStats() {
+  const t = useTranslations("AboutStats");
+
+  const stats = [
+    {
+      icon: <Zap size={24} />,
+      title: t("modernStack"),
+      description: t("modernStackDesc"),
+    },
+    {
+      icon: <Award size={24} />,
+      title: t("performance"),
+      description: t("performanceDesc"),
+    },
+    {
+      icon: <Code2 size={24} />,
+      title: t("systemDesign"),
+      description: t("systemDesignDesc"),
+    },
+    {
+      icon: <Sparkles size={24} />,
+      title: t("motionDesign"),
+      description: t("motionDesignDesc"),
+    },
+  ];
+
   return (
-    <div className="relative w-full py-20 px-4 overflow-hidden bg-linear-to-b from-background via-background/50 to-background">
-      <div className="max-w-7xl mx-auto">
+    <div
+      id="about-section"
+      className="relative w-full py-20 px-4 overflow-hidden bg-linear-to-b from-background via-background/50 to-background"
+    >
+      <div className="max-w-6xl mx-auto">
         <SectionHeader
           icon={User}
-          title="About Me"
-          subtitle="Engineering digital experiences with modern technologies and creative solutions"
+          title={t("sectionTitle")}
+          subtitle={t("sectionSubtitle")}
         />
       </div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Side - Title & Description */}
@@ -65,32 +56,28 @@ export function AboutStats() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-              Engineering{" "}
-              <span className="text-primary">digital experiences</span> that
-              feel alive.
+              {t("headline")}
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              I am a Frontend Engineer focused on building immersive digital
-              experiences. Currently exploring WebGL and 3D interactions to
-              bridge the gap between static design and dynamic reality.
+              {t("description")}
             </p>
 
             {/* Stats Numbers */}
             <div className="flex gap-12">
               <div>
                 <div className="text-4xl font-bold text-foreground mb-1">
-                  {experience.years}
+                  {t("yearsExperience")}
                 </div>
                 <div className="text-xs font-bold text-muted-foreground tracking-wider">
-                  {experience.yearsLabel}
+                  {t("yearsLabel")}
                 </div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-foreground mb-1">
-                  {experience.projects}
+                  {t("projects")}
                 </div>
                 <div className="text-xs font-bold text-muted-foreground tracking-wider">
-                  {experience.projectsLabel}
+                  {t("projectsLabel")}
                 </div>
               </div>
             </div>
@@ -133,7 +120,7 @@ export function AboutStats() {
       </div>
 
       {/* Bottom Accent */}
-      <div className="max-w-7xl mx-auto mt-16">
+      <div className="max-w-6xl mx-auto mt-16">
         <div className="h-0.5 w-full bg-linear-to-r from-transparent via-primary/50 to-transparent" />
       </div>
     </div>

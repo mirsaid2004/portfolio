@@ -3,7 +3,15 @@
 import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
 
-export const MagneticButton = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+export const MagneticButton = ({
+  children,
+  className,
+  onClick,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+}) => {
   const ref = useRef<HTMLButtonElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -26,6 +34,7 @@ export const MagneticButton = ({ children, className }: { children: React.ReactN
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
       animate={{ x, y }}
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
       className={className}

@@ -10,19 +10,22 @@ import {
   Users,
   Zap,
   FolderKanban,
+  ArrowRight,
 } from "lucide-react";
 import { SectionHeader } from "./section-header";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 interface Project {
   id: number;
   title: string;
-  description: string;
-  longDescription: string;
+  descriptionKey: string;
+  longDescriptionKey: string;
   image: string;
   tags: string[];
   metrics: {
     icon: React.ReactNode;
-    label: string;
+    labelKey: string;
     value: string;
   }[];
   links: {
@@ -32,102 +35,201 @@ interface Project {
   featured?: boolean;
 }
 
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    description:
-      "High-performance Next.js e-commerce with 100 Lighthouse score",
-    longDescription:
-      "Built a scalable e-commerce platform using Next.js 14, React Server Components, and Edge Runtime. Implemented advanced caching strategies and optimized images resulting in perfect Lighthouse scores.",
-    image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-    tags: ["Next.js", "TypeScript", "Tailwind", "Stripe"],
-    metrics: [
-      { icon: <Zap size={16} />, label: "Performance", value: "100/100" },
-      { icon: <TrendingUp size={16} />, label: "Conversion", value: "+45%" },
-      { icon: <Users size={16} />, label: "Users", value: "50k+" },
-    ],
-    links: {
-      live: "#",
-      github: "#",
-    },
-    featured: true,
-  },
-  {
-    id: 2,
-    title: "Real-Time Analytics Dashboard",
-    description: "WebSocket-powered dashboard handling 10k+ concurrent users",
-    longDescription:
-      "Developed a real-time analytics platform with WebSocket connections, Redis pub/sub, and optimized React rendering. Handles massive concurrent connections with sub-100ms latency.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    tags: ["React", "Node.js", "WebSocket", "Redis"],
-    metrics: [
-      { icon: <Users size={16} />, label: "Concurrent", value: "10k+" },
-      { icon: <Zap size={16} />, label: "Latency", value: "<100ms" },
-      { icon: <TrendingUp size={16} />, label: "Uptime", value: "99.9%" },
-    ],
-    links: {
-      live: "#",
-      github: "#",
-    },
-  },
-  {
-    id: 3,
-    title: "AI Content Generator",
-    description: "OpenAI-powered content creation tool with smart caching",
-    longDescription:
-      "Created an AI-powered content generation platform integrated with OpenAI API. Implemented intelligent caching, rate limiting, and streaming responses for optimal UX.",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
-    tags: ["Next.js", "OpenAI", "PostgreSQL", "Docker"],
-    metrics: [
-      { icon: <Zap size={16} />, label: "Response", value: "<2s" },
-      { icon: <Users size={16} />, label: "Daily Users", value: "5k+" },
-      { icon: <TrendingUp size={16} />, label: "Saved Time", value: "70%" },
-    ],
-    links: {
-      live: "#",
-      github: "#",
-    },
-  },
-  {
-    id: 4,
-    title: "DevOps Pipeline Manager",
-    description: "Jenkins + Docker orchestration with automated deployments",
-    longDescription:
-      "Built a comprehensive CI/CD pipeline management system using Jenkins, Docker, and Kubernetes. Automated deployments reduced release time by 80%.",
-    image:
-      "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=600&fit=crop",
-    tags: ["Jenkins", "Docker", "K8s", "Node.js"],
-    metrics: [
-      { icon: <Zap size={16} />, label: "Deploy Time", value: "-80%" },
-      { icon: <TrendingUp size={16} />, label: "Success Rate", value: "98%" },
-      { icon: <Users size={16} />, label: "Teams", value: "12" },
-    ],
-    links: {
-      github: "#",
-    },
-  },
-];
-
 export function ProjectsShowcase() {
   const [activeProject, setActiveProject] = useState<number | null>(null);
+  const t = useTranslations("ProjectsShowcase");
+
+  const projects: Project[] = [
+    {
+      id: 1,
+      title: "Soff.uz",
+      descriptionKey: "projects.soff.description",
+      longDescriptionKey: "projects.soff.longDescription",
+      image:
+        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+      tags: ["Next.js", "TypeScript", "Tailwind", "Stripe"],
+      metrics: [
+        {
+          icon: <Zap size={16} />,
+          labelKey: "projects.soff.metrics.performance",
+          value: "100/100",
+        },
+        {
+          icon: <TrendingUp size={16} />,
+          labelKey: "projects.soff.metrics.conversion",
+          value: "+45%",
+        },
+        {
+          icon: <Users size={16} />,
+          labelKey: "projects.soff.metrics.users",
+          value: "50k+",
+        },
+      ],
+      links: {
+        live: "https://soff.uz",
+      },
+      featured: true,
+    },
+    {
+      id: 2,
+      title: "Ilimiyish.uz",
+      descriptionKey: "projects.ilimiyish.description",
+      longDescriptionKey: "projects.ilimiyish.longDescription",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      tags: ["React", "Node.js", "WebSocket", "Redis"],
+      metrics: [
+        {
+          icon: <Users size={16} />,
+          labelKey: "projects.ilimiyish.metrics.concurrent",
+          value: "10k+",
+        },
+        {
+          icon: <Zap size={16} />,
+          labelKey: "projects.ilimiyish.metrics.latency",
+          value: "<100ms",
+        },
+        {
+          icon: <TrendingUp size={16} />,
+          labelKey: "projects.ilimiyish.metrics.uptime",
+          value: "99.9%",
+        },
+      ],
+      links: {
+        live: "https://ilimiyish.uz",
+      },
+    },
+    {
+      id: 3,
+      title: "RealEstateCRM.uz",
+      descriptionKey: "projects.realestatecrm.description",
+      longDescriptionKey: "projects.realestatecrm.longDescription",
+      image:
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
+      tags: ["Next.js", "OpenAI", "PostgreSQL", "Docker"],
+      metrics: [
+        {
+          icon: <Zap size={16} />,
+          labelKey: "projects.realestatecrm.metrics.response",
+          value: "<2s",
+        },
+        {
+          icon: <Users size={16} />,
+          labelKey: "projects.realestatecrm.metrics.dailyUsers",
+          value: "5k+",
+        },
+        {
+          icon: <TrendingUp size={16} />,
+          labelKey: "projects.realestatecrm.metrics.savedTime",
+          value: "70%",
+        },
+      ],
+      links: {
+        live: "https://realestatecrm.uz",
+      },
+    },
+    {
+      id: 4,
+      title: "Ishora.uz",
+      descriptionKey: "projects.ishora.description",
+      longDescriptionKey: "projects.ishora.longDescription",
+      image:
+        "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=600&fit=crop",
+      tags: ["Jenkins", "Docker", "K8s", "Node.js"],
+      metrics: [
+        {
+          icon: <Zap size={16} />,
+          labelKey: "projects.ishora.metrics.deployTime",
+          value: "-80%",
+        },
+        {
+          icon: <TrendingUp size={16} />,
+          labelKey: "projects.ishora.metrics.successRate",
+          value: "98%",
+        },
+        {
+          icon: <Users size={16} />,
+          labelKey: "projects.ishora.metrics.teams",
+          value: "12",
+        },
+      ],
+      links: {
+        live: "https://ishora.uz",
+      },
+    },
+    {
+      id: 5,
+      title: "DarmonServis.uz",
+      descriptionKey: "projects.darmonservis.description",
+      longDescriptionKey: "projects.darmonservis.longDescription",
+      image:
+        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+      tags: ["Next.js", "TypeScript", "Tailwind", "Stripe"],
+      metrics: [
+        {
+          icon: <Zap size={16} />,
+          labelKey: "projects.darmonservis.metrics.performance",
+          value: "100/100",
+        },
+        {
+          icon: <TrendingUp size={16} />,
+          labelKey: "projects.darmonservis.metrics.conversion",
+          value: "+45%",
+        },
+        {
+          icon: <Users size={16} />,
+          labelKey: "projects.darmonservis.metrics.users",
+          value: "50k+",
+        },
+      ],
+      links: {
+        live: "https://darmonservis.uz",
+      },
+    },
+    {
+      id: 6,
+      title: "DarmonTravel.uz",
+      descriptionKey: "projects.darmontravel.description",
+      longDescriptionKey: "projects.darmontravel.longDescription",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      tags: ["React", "Node.js", "WebSocket", "Redis"],
+      metrics: [
+        {
+          icon: <Users size={16} />,
+          labelKey: "projects.darmontravel.metrics.concurrent",
+          value: "10k+",
+        },
+        {
+          icon: <Zap size={16} />,
+          labelKey: "projects.darmontravel.metrics.latency",
+          value: "<100ms",
+        },
+        {
+          icon: <TrendingUp size={16} />,
+          labelKey: "projects.darmontravel.metrics.uptime",
+          value: "99.9%",
+        },
+      ],
+      links: {
+        live: "https://darmontravel.uz",
+      },
+    },
+  ];
 
   return (
     <div className="relative w-full py-20 px-4 bg-linear-to-b from-background via-background/50 to-background">
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <SectionHeader
           icon={FolderKanban}
-          title="Featured Projects"
-          subtitle="A selection of projects showcasing my expertise in modern web development, performance optimization, and scalable architecture"
+          title={t("sectionTitle")}
+          subtitle={t("sectionSubtitle")}
         />
       </div>
 
       {/* Projects Grid */}
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
@@ -156,7 +258,7 @@ export function ProjectsShowcase() {
                   <div className="absolute top-4 right-4 z-20">
                     <div className="flex items-center gap-1 px-3 py-1 bg-primary/90 text-primary-foreground rounded-full text-xs font-bold backdrop-blur-sm">
                       <Star size={12} fill="currentColor" />
-                      Featured
+                      {t("featured")}
                     </div>
                   </div>
                 )}
@@ -180,7 +282,7 @@ export function ProjectsShowcase() {
                     {project.title}
                   </h3>
                   <p className="text-sm text-gray-300 mb-4 line-clamp-2">
-                    {project.description}
+                    {t(project.descriptionKey as any)}
                   </p>
 
                   {/* Metrics */}
@@ -192,7 +294,7 @@ export function ProjectsShowcase() {
                       >
                         <div className="text-primary">{metric.icon}</div>
                         <div className="text-xs text-muted-foreground">
-                          {metric.label}
+                          {t(metric.labelKey as any)}
                         </div>
                         <div className="text-sm font-bold text-foreground">
                           {metric.value}
@@ -211,7 +313,7 @@ export function ProjectsShowcase() {
                         className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground rounded-lg font-semibold text-sm hover:bg-primary/90 transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary))]"
                       >
                         <ExternalLink size={16} />
-                        View Live
+                        {t("viewLive")}
                       </a>
                     )}
                     {project.links.github && (
@@ -222,7 +324,7 @@ export function ProjectsShowcase() {
                         className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-card/80 backdrop-blur-sm text-foreground rounded-lg font-semibold text-sm border border-border/50 hover:border-primary/50 hover:bg-card transition-all duration-300"
                       >
                         <Github size={16} />
-                        Code
+                        {t("viewCode")}
                       </a>
                     )}
                   </div>
@@ -236,8 +338,29 @@ export function ProjectsShowcase() {
         </div>
       </div>
 
+      {/* View More Projects Link */}
+      <div className="max-w-6xl mx-auto mt-12 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-card/50 dark:bg-card/30 backdrop-blur-xl border border-border/50 hover:border-primary/50 text-foreground hover:text-primary font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
+          >
+            {t("viewMoreProjects")}
+            <ArrowRight
+              size={18}
+              className="group-hover:translate-x-1 transition-transform"
+            />
+          </Link>
+        </motion.div>
+      </div>
+
       {/* Bottom Accent */}
-      <div className="max-w-7xl mx-auto mt-16">
+      <div className="max-w-6xl mx-auto mt-16">
         <div className="h-0.5 w-full bg-linear-to-r from-transparent via-primary/50 to-transparent" />
       </div>
     </div>

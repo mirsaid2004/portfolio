@@ -2,61 +2,102 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Twitter, Linkedin, Mail, Heart, ArrowUp } from "lucide-react";
+import {
+  Github,
+  Mail,
+  Heart,
+  ArrowUp,
+  Linkedin,
+  Send,
+  Instagram,
+} from "lucide-react";
 import { Link } from "@/i18n/routing";
+import { useTranslations, useLocale } from "next-intl";
+import Logo from "./Logo";
 
 const socialLinks = [
   {
     icon: <Github size={20} />,
-    href: "https://github.com/yourusername",
+    href: "https://github.com/mirsaid2004",
     label: "GitHub",
   },
   {
-    icon: <Twitter size={20} />,
-    href: "https://twitter.com/yourusername",
-    label: "Twitter",
-  },
-  {
     icon: <Linkedin size={20} />,
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/mirsaid-mirakhmedov-56a658225/",
     label: "LinkedIn",
   },
   {
     icon: <Mail size={20} />,
-    href: "mailto:hello@projectblank.io",
+    href: "mailto:mir21.07.2004@gmail.com",
     label: "Email",
+  },
+  {
+    icon: <Send size={20} />,
+    href: "https://t.me/mirakhmedov_mirsaid",
+    label: "Telegram",
+  },
+  {
+    icon: <Instagram size={20} />,
+    href: "https://www.instagram.com/mirsaid20045/",
+    label: "Instagram",
   },
 ];
 
-const footerLinks = {
-  navigation: [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/#about" },
-    { label: "Projects", href: "/#projects" },
-    { label: "Contact", href: "/contact" },
-  ],
-  resources: [
-    { label: "NPM Packages", href: "https://www.npmjs.com/~yourusername" },
-    { label: "GitHub", href: "https://github.com/yourusername" },
-    { label: "Blog", href: "/blog" },
-    { label: "Resume", href: "/resume.pdf" },
-  ],
-};
-
 export function Footer() {
+  const t = useTranslations("Footer");
+  const tNav = useTranslations("Navigation");
+  const locale = useLocale();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleDownloadResume = () => {
+    // Download resume based on locale
+    const resumeFiles: Record<string, string> = {
+      en: "/cv_en.pdf",
+      uz: "/cv_uz.pdf",
+      ru: "/cv_ru.pdf",
+    };
+
+    const resumeFile = resumeFiles[locale] || resumeFiles.en;
+
+    // Create temporary link and trigger download
+    const link = document.createElement("a");
+    link.href = resumeFile;
+    link.download = `Mirsaid_Mirakhmedov_CV_${locale}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const footerLinks = {
+    navigation: [
+      { label: tNav("home"), href: "/" },
+      { label: tNav("about"), href: "/#about" },
+      { label: tNav("work"), href: "/#projects" },
+      { label: tNav("contact"), href: "/contact" },
+    ],
+    resources: [
+      {
+        label: t("resources.npmPackages"),
+        href: "https://www.npmjs.com/~mirsaid_dev",
+      },
+      { label: t("resources.github"), href: "https://github.com/mirsaid2004" },
+      { label: t("resources.blog"), href: "/blog" },
+      { label: t("resources.resume"), onClick: handleDownloadResume },
+    ],
+  };
+
   return (
-    <footer className="relative w-full bg-card/30 dark:bg-card/20 backdrop-blur-xl border-t border-border/50 overflow-hidden">
+    <footer className="relative w-full bg-card/30 dark:bg-card/20 backdrop-blur-xl border-t border-border/50 overflow-hidden px-4 py-16">
       {/* Decorative Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-16 relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
@@ -66,13 +107,14 @@ export function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Antigravity
-              </h3>
+              <div className="flex items-center gap-2 mb-4">
+                <Logo className="w-8 h-8" />
+                <h3 className="text-2xl font-bold text-foreground">
+                  {t("brandName")}
+                </h3>
+              </div>
               <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
-                Creative Technologist crafting digital experiences that push
-                boundaries. Specializing in modern web development and
-                interactive design.
+                {t("brandDescription")}
               </p>
 
               {/* Social Links */}
@@ -101,7 +143,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h4 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4">
-              Navigation
+              {t("navigationTitle")}
             </h4>
             <ul className="space-y-3">
               {footerLinks.navigation.map((link) => (
@@ -125,23 +167,34 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h4 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4">
-              Resources
+              {t("resourcesTitle")}
             </h4>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    target={link.href.startsWith("http") ? "_blank" : undefined}
-                    rel={
-                      link.href.startsWith("http")
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
-                    className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm"
-                  >
-                    {link.label}
-                  </a>
+                  {link.onClick ? (
+                    <button
+                      onClick={link.onClick}
+                      className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm"
+                    >
+                      {link.label}
+                    </button>
+                  ) : (
+                    <a
+                      href={link.href}
+                      target={
+                        link.href?.startsWith("http") ? "_blank" : undefined
+                      }
+                      rel={
+                        link.href?.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
+                      className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm"
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -160,9 +213,9 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-sm text-muted-foreground flex items-center gap-2"
           >
-            © {new Date().getFullYear()} Antigravity. Built with{" "}
-            <Heart size={14} className="text-primary fill-primary" /> using
-            Next.js
+            © {new Date().getFullYear()} {t("copyright")}{" "}
+            <Heart size={14} className="text-primary fill-primary" />{" "}
+            {t("using")}
           </motion.p>
 
           {/* Scroll to Top Button */}
@@ -173,7 +226,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.3 }}
             onClick={scrollToTop}
             className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-primary-foreground border border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-110 group"
-            aria-label="Scroll to top"
+            aria-label={t("scrollToTop")}
           >
             <ArrowUp
               size={18}

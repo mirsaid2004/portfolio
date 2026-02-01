@@ -11,6 +11,7 @@ import {
   Code2,
 } from "lucide-react";
 import { SectionHeader } from "./section-header";
+import { useTranslations } from "next-intl";
 
 interface NpmPackage {
   name: string;
@@ -32,7 +33,7 @@ const packages: NpmPackage[] = [
       "A lightweight React component for creating an elegant image magnifier effect on hover. Perfect for e-commerce product galleries and detail-focused image displays.",
     downloads: "0",
     npmLink: "https://www.npmjs.com/package/hover-image-magnifier",
-    githubLink: "#",
+    githubLink: "https://github.com/mirsaid2004/hover-image-magnifier",
     features: [
       "Zero dependencies",
       "Fully responsive",
@@ -45,20 +46,22 @@ const packages: NpmPackage[] = [
 ];
 
 export function NpmContributions() {
+  const t = useTranslations("NpmContributions");
+
   return (
     <div className="relative w-full py-20 px-4 overflow-hidden bg-linear-to-b from-background via-background/50 to-background">
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <SectionHeader
           icon={Package}
-          badge="Open Source"
-          title="NPM Contributions"
-          subtitle="Building reusable components and tools for the developer community"
+          badge={t("badge")}
+          title={t("sectionTitle")}
+          subtitle={t("sectionSubtitle")}
         />
       </div>
 
       {/* Packages Grid */}
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 gap-8">
           {packages.map((pkg, index) => (
             <motion.div
@@ -118,7 +121,7 @@ export function NpmContributions() {
                         <Download className="text-primary" size={18} />
                         <div>
                           <p className="text-xs text-muted-foreground">
-                            Downloads
+                            {t("downloads")}
                           </p>
                           <p className="text-lg font-bold text-foreground">
                             {pkg.downloads}
@@ -129,7 +132,7 @@ export function NpmContributions() {
                         <GitBranch className="text-primary" size={18} />
                         <div>
                           <p className="text-xs text-muted-foreground">
-                            Version
+                            {t("version")}
                           </p>
                           <p className="text-lg font-bold text-foreground">
                             {pkg.version}
@@ -143,7 +146,7 @@ export function NpmContributions() {
                   <div className="mb-6 p-6 bg-background/50 backdrop-blur-sm rounded-xl border border-border/50">
                     <h4 className="text-sm font-bold text-foreground mb-4 flex items-center gap-2">
                       <Code2 size={16} className="text-primary" />
-                      Key Features
+                      {t("keyFeatures")}
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                       {pkg.features.map((feature, idx) => (
@@ -167,7 +170,7 @@ export function NpmContributions() {
                       className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold text-sm hover:bg-primary/90 transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary))]"
                     >
                       <Package size={16} />
-                      View on NPM
+                      {t("viewOnNpm")}
                       <ExternalLink size={14} />
                     </a>
                     {pkg.githubLink && (
@@ -178,7 +181,7 @@ export function NpmContributions() {
                         className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-card/80 backdrop-blur-sm text-foreground rounded-lg font-semibold text-sm border border-border/50 hover:border-primary/50 hover:bg-card transition-all duration-300"
                       >
                         <Code2 size={16} />
-                        View Source
+                        {t("viewSource")}
                         <ExternalLink size={14} />
                       </a>
                     )}
@@ -194,32 +197,30 @@ export function NpmContributions() {
       </div>
 
       {/* Call to Action */}
-      <div className="max-w-7xl mx-auto mt-12 text-center">
+      <div className="max-w-6xl mx-auto mt-12 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="p-8 bg-card/30 backdrop-blur-xl rounded-2xl border border-border/50"
         >
-          <p className="text-muted-foreground mb-4">
-            More packages coming soon! Follow my work on npm and GitHub
-          </p>
+          <p className="text-muted-foreground mb-4">{t("morePackages")}</p>
           <div className="flex justify-center gap-4">
             <a
-              href="https://www.npmjs.com/~yourusername"
+              href="https://www.npmjs.com/~mirsaid_dev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-primary/80 transition-colors font-medium text-sm flex items-center gap-2"
             >
               <Package size={16} />
-              NPM Profile
+              {t("npmProfile")}
             </a>
           </div>
         </motion.div>
       </div>
 
       {/* Bottom Accent */}
-      <div className="max-w-7xl mx-auto mt-16">
+      <div className="max-w-6xl mx-auto mt-16">
         <div className="h-0.5 w-full bg-linear-to-r from-transparent via-primary/50 to-transparent" />
       </div>
     </div>

@@ -2,13 +2,19 @@
   "HomePage": {
     "title": "Project Blank 2026",
     "description": "A high-end, immersive portfolio.",
-    "intro": "Hi, I’m Antigravity, a Frontend Engineer building immersive digital experiences.",
+    "intro": "Hi, I'm Mirsaid, a software engineer crafting innovative digital experiences with creativity.",
     "viewWork": "View My Work"
   },
   "NotFound": {
     "title": "404",
     "subtitle": "Page Not Found",
     "description": "The page you are looking for does not exist or has been moved.",
+    "backHome": "Return Home"
+  },
+  "UnderConstruction": {
+    "title": "Under Construction",
+    "subtitle": "Coming Soon!",
+    "description": "We're working hard to bring you something amazing. This page is currently being built.",
     "backHome": "Return Home"
   },
   "ContactPage": {
@@ -73,5 +79,238 @@
       "action": "Used Recharts and Supabase Realtime.",
       "result": "Supports 10k+ concurrent connections."
     }
+  },
+  "ProfileCard": {
+    "role": "Software Engineer",
+    "location": "Global / Remote",
+    "downloadResume": "Download Resume (EN)",
+    "downloading": "Downloading..."
+  },
+  "AboutStats": {
+    "sectionTitle": "About Me",
+    "sectionSubtitle": "Engineering digital experiences with modern technologies and creative solutions",
+    "headline": "Engineering digital experiences that feel alive.",
+    "description": "I am a Software Engineer focused on building immersive digital experiences. Currently exploring modern web technologies and best practices to bridge the gap between design and development.",
+    "yearsExperience": "3+",
+    "yearsLabel": "YEARS EXPERIENCE",
+    "projects": "15+",
+    "projectsLabel": "PROJECTS LAUNCHED",
+    "modernStack": "Modern Stack",
+    "modernStackDesc": "Next.js, Tailwind, TypeScript, and React for high-end web apps.",
+    "performance": "Performance",
+    "performanceDesc": "Optimizing for Core Web Vitals and seamless 60fps interactions.",
+    "systemDesign": "System Design",
+    "systemDesignDesc": "Architecting scalable components and design systems.",
+    "motionDesign": "Motion Design",
+    "motionDesignDesc": "Crafting meaningful animations that improve user intuition."
+  },
+  "Experience": {
+    "sectionTitle": "Work Experience",
+    "sectionSubtitle": "My professional journey building scalable web applications",
+    "present": "Present",
+    "jobs": {
+      "soff": {
+        "title": "Front-end Developer (Next.js)",
+        "company": "Soff.uz",
+        "period": "October 2025 - February 2026",
+        "description": "Worked on multiple production applications including Soff, Soff Seller, and Ilmiyish",
+        "achievements": [
+          "Implemented efficient cache invalidation mechanism improving data consistency",
+          "Significantly improved frontend performance by optimizing rendering logic",
+          "Refactored legacy codebases increasing readability and maintainability"
+        ]
+      },
+      "darmon": {
+        "title": "Front-end Developer (React/Next.js)",
+        "company": "DarmonServis.uz",
+        "period": "August 2024 - May 2025",
+        "description": "Worked on Darmon Servis internal CRM and Darmon Travel website",
+        "achievements": [
+          "Contributed to large-scale ERP system for private clinic managing complex workflows",
+          "Implemented data virtualization for efficient large dataset rendering",
+          "Built custom complex table component with advanced mouse interactions"
+        ]
+      },
+      "itkey": {
+        "title": "Software Engineer (React/Node.js)",
+        "company": "IT-KEY",
+        "period": "September 2023 - June 2024",
+        "description": "Developed large-scale real estate CRM system used by major realtor companies",
+        "achievements": [
+          "Successfully implemented system for NewHouse.uz, KNT.uz, and MegapolisBuxoro.uz",
+          "Built complex data-driven interfaces using React declarative UI package",
+          "Implemented scalable infinite data loading using async generators on Node.js backend",
+          "Developed highly interactive corporate websites with complex user interactions"
+        ]
+      },
+      "dynbek": {
+        "title": "Front-end Developer (React)",
+        "company": "Dynbek",
+        "period": "December 2022 - August 2023",
+        "description": "Participated in centralized barbershop management system with integrated CRM",
+        "achievements": [
+          "Built responsive user interfaces without UI libraries, strengthening core fundamentals",
+          "Worked on CRM interface based on Enigma UI template",
+          "Gained hands-on experience in real-world workflows and team collaboration"
+        ]
+      }
+    }
+  },
+  "TechStack": {
+    "sectionTitle": "Tech Stack",
+    "sectionSubtitle": "Technologies I work with to build amazing experiences",
+    "categories": {
+      "language": "Language",
+      "frontend": "Frontend",
+      "framework": "Framework",
+      "backend": "Backend",
+      "styling": "Styling",
+      "versionControl": "Version Control",
+      "devops": "DevOps",
+      "processManager": "Process Manager",
+      "cicd": "CI/CD",
+      "qa": "Quality Assurance"
+    }
+  },
+  "NpmContributions": {
+    "badge": "Open Source",
+    "sectionTitle": "NPM Contributions",
+    "sectionSubtitle": "Building reusable components and tools for the developer community",
+    "keyFeatures": "Key Features",
+    "downloads": "Downloads",
+    "version": "Version",
+    "viewOnNpm": "View on NPM",
+    "viewSource": "View Source",
+    "morePackages": "More packages coming soon! Follow my work on npm and GitHub",
+    "npmProfile": "NPM Profile"
+  },
+  "Contact": {
+    "getInTouch": "Get in Touch",
+    "titleStart": "Let's work",
+    "titleHighlight": "together",
+    "description": "Have a project in mind or just want to chat? Drop me a message and I'll get back to you soon.",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "locationValue": "Global / Remote",
+    "form": {
+      "nameLabel": "Your Name",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "Select a subject",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "submitButton": "Send Message",
+      "sending": "Sending...",
+      "subjects": {
+        "freelance": "Freelance Project",
+        "fulltime": "Full-time Opportunity",
+        "collaboration": "Collaboration",
+        "other": "Other"
+      },
+      "validation": {
+        "nameMin": "Name must be at least 2 characters",
+        "nameMax": "Name must be less than 50 characters",
+        "nameRequired": "Name is required",
+        "emailInvalid": "Invalid email address",
+        "emailRequired": "Email is required",
+        "subjectRequired": "Please select a subject",
+        "messageMin": "Message must be at least 10 characters",
+        "messageMax": "Message must be less than 500 characters",
+        "messageRequired": "Message is required"
+      },
+      "success": {
+        "title": "Message Sent! 🎉",
+        "description": "Thank you for reaching out! I've received your message and will get back to you as soon as possible.",
+        "button": "Got it!"
+      },
+      "error": "Oops! Something went wrong. Please try again."
+    }
+  },
+  "ProjectsShowcase": {
+    "sectionTitle": "Featured Projects",
+    "sectionSubtitle": "A selection of projects showcasing my expertise in modern web development, performance optimization, and scalable architecture",
+    "featured": "Featured",
+    "viewLive": "View Live",
+    "viewCode": "Code",
+    "viewMoreProjects": "View More Projects",
+    "projects": {
+      "soff": {
+        "description": "High-performance Next.js e-commerce with 100 Lighthouse score",
+        "longDescription": "Built a scalable e-commerce platform using Next.js 14, React Server Components, and Edge Runtime. Implemented advanced caching strategies and optimized images resulting in perfect Lighthouse scores.",
+        "metrics": {
+          "performance": "Performance",
+          "conversion": "Conversion",
+          "users": "Users"
+        }
+      },
+      "ilimiyish": {
+        "description": "WebSocket-powered dashboard handling 10k+ concurrent users",
+        "longDescription": "Developed a real-time analytics platform with WebSocket connections, Redis pub/sub, and optimized React rendering. Handles massive concurrent connections with sub-100ms latency.",
+        "metrics": {
+          "concurrent": "Concurrent",
+          "latency": "Latency",
+          "uptime": "Uptime"
+        }
+      },
+      "realestatecrm": {
+        "description": "OpenAI-powered content creation tool with smart caching",
+        "longDescription": "Created an AI-powered content generation platform integrated with OpenAI API. Implemented intelligent caching, rate limiting, and streaming responses for optimal UX.",
+        "metrics": {
+          "response": "Response",
+          "dailyUsers": "Daily Users",
+          "savedTime": "Saved Time"
+        }
+      },
+      "ishora": {
+        "description": "Jenkins + Docker orchestration with automated deployments",
+        "longDescription": "Built a comprehensive CI/CD pipeline management system using Jenkins, Docker, and Kubernetes. Automated deployments reduced release time by 80%.",
+        "metrics": {
+          "deployTime": "Deploy Time",
+          "successRate": "Success Rate",
+          "teams": "Teams"
+        }
+      },
+      "darmonservis": {
+        "description": "High-performance Next.js e-commerce with 100 Lighthouse score",
+        "longDescription": "Built a scalable e-commerce platform using Next.js 14, React Server Components, and Edge Runtime. Implemented advanced caching strategies and optimized images resulting in perfect Lighthouse scores.",
+        "metrics": {
+          "performance": "Performance",
+          "conversion": "Conversion",
+          "users": "Users"
+        }
+      },
+      "darmontravel": {
+        "description": "WebSocket-powered dashboard handling 10k+ concurrent users",
+        "longDescription": "Developed a real-time analytics platform with WebSocket connections, Redis pub/sub, and optimized React rendering. Handles massive concurrent connections with sub-100ms latency.",
+        "metrics": {
+          "concurrent": "Concurrent",
+          "latency": "Latency",
+          "uptime": "Uptime"
+        }
+      }
+    }
+  },
+  "Footer": {
+    "brandName": "M_DEV",
+    "brandDescription": "Creative Technologist crafting digital experiences that push boundaries. Specializing in modern web development and interactive design.",
+    "navigationTitle": "Navigation",
+    "resourcesTitle": "Resources",
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "resources": {
+      "npmPackages": "NPM Packages",
+      "github": "GitHub",
+      "blog": "Blog",
+      "resume": "Resume"
+    },
+    "copyright": "M_Dev. Built with",
+    "using": "using Next.js",
+    "scrollToTop": "Scroll to top"
   }
 }

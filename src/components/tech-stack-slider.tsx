@@ -17,6 +17,7 @@ import {
   Braces,
 } from "lucide-react";
 import { SectionHeader } from "./section-header";
+import { useTranslations } from "next-intl";
 
 interface TechItem {
   name: string;
@@ -24,33 +25,75 @@ interface TechItem {
   category: string;
 }
 
-const techStack: TechItem[] = [
-  { name: "JS/TS", icon: <FileCode size={32} />, category: "Language" },
-  { name: "React", icon: <Boxes size={32} />, category: "Frontend" },
-  { name: "Next.js", icon: <Layers size={32} />, category: "Framework" },
-  { name: "Node.js", icon: <Server size={32} />, category: "Backend" },
-  { name: "NestJS", icon: <Braces size={32} />, category: "Framework" },
-  { name: "Tailwind/Sass", icon: <Palette size={32} />, category: "Styling" },
-  { name: "Git", icon: <GitBranch size={32} />, category: "Version Control" },
-  { name: "Docker", icon: <Container size={32} />, category: "DevOps" },
-  { name: "PM2", icon: <Cog size={32} />, category: "Process Manager" },
-  { name: "Jenkins", icon: <Workflow size={32} />, category: "CI/CD" },
-  {
-    name: "Testing",
-    icon: <TestTube2 size={32} />,
-    category: "Quality Assurance",
-  },
-];
-
-// Duplicate the array for seamless infinite scroll
-const duplicatedTechStack = [
-  ...techStack,
-  ...techStack,
-  ...techStack,
-  ...techStack,
-];
-
 export function TechStackSlider() {
+  const t = useTranslations("TechStack");
+
+  const techStack: TechItem[] = [
+    {
+      name: "JS/TS",
+      icon: <FileCode size={32} />,
+      category: t("categories.language"),
+    },
+    {
+      name: "React",
+      icon: <Boxes size={32} />,
+      category: t("categories.frontend"),
+    },
+    {
+      name: "Next.js",
+      icon: <Layers size={32} />,
+      category: t("categories.framework"),
+    },
+    {
+      name: "Node.js",
+      icon: <Server size={32} />,
+      category: t("categories.backend"),
+    },
+    {
+      name: "NestJS",
+      icon: <Braces size={32} />,
+      category: t("categories.framework"),
+    },
+    {
+      name: "Tailwind/Sass",
+      icon: <Palette size={32} />,
+      category: t("categories.styling"),
+    },
+    {
+      name: "Git",
+      icon: <GitBranch size={32} />,
+      category: t("categories.versionControl"),
+    },
+    {
+      name: "Docker",
+      icon: <Container size={32} />,
+      category: t("categories.devops"),
+    },
+    {
+      name: "PM2",
+      icon: <Cog size={32} />,
+      category: t("categories.processManager"),
+    },
+    {
+      name: "Jenkins",
+      icon: <Workflow size={32} />,
+      category: t("categories.cicd"),
+    },
+    {
+      name: "Testing",
+      icon: <TestTube2 size={32} />,
+      category: t("categories.qa"),
+    },
+  ];
+
+  // Duplicate the array for seamless infinite scroll
+  const duplicatedTechStack = [
+    ...techStack,
+    ...techStack,
+    ...techStack,
+    ...techStack,
+  ];
+
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [dragStartX, setDragStartX] = useState(0);
@@ -199,16 +242,16 @@ export function TechStackSlider() {
   return (
     <div className="relative w-full py-12 px-4 overflow-hidden bg-linear-to-b from-background via-background/50 to-background">
       {/* Section Title */}
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <SectionHeader
           icon={Code2}
-          title="Tech Stack"
-          subtitle="Technologies I work with to build amazing experiences"
+          title={t("sectionTitle")}
+          subtitle={t("sectionSubtitle")}
         />
       </div>
 
       {/* Slider Container */}
-      <div className="relative h-52 max-w-7xl mx-auto">
+      <div className="relative h-52 max-w-6xl mx-auto">
         {/* Gradient Overlays */}
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-background to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-background to-transparent z-10 pointer-events-none" />
@@ -262,7 +305,7 @@ export function TechStackSlider() {
       </div>
 
       {/* Bottom Accent Line */}
-      <div className="max-w-7xl mx-auto mt-8">
+      <div className="max-w-6xl mx-auto mt-8">
         <div className="h-0.5 w-full bg-linear-to-r from-transparent via-primary/50 to-transparent" />
       </div>
     </div>

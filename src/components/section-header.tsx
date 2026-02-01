@@ -18,7 +18,7 @@ export function SectionHeader({
   badge,
 }: SectionHeaderProps) {
   return (
-    <div className="max-w-7xl mx-auto mb-16">
+    <div className="max-w-6xl mx-auto mb-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

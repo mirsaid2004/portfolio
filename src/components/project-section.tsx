@@ -33,7 +33,11 @@ export function ProjectSection() {
 
   const item = {
     hidden: { opacity: 0, y: 50 },
-    show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 50 } },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring" as const, stiffness: 50 },
+    },
   };
 
   return (
@@ -58,20 +62,20 @@ export function ProjectSection() {
         {projects.map((project) => (
           <motion.div key={project.id} variants={item}>
             <ProjectCard
-              title={t(`${project.id}.title`)}
-              description={t(`${project.id}.description`)}
+              title={t(`${project.id}.title` as any)}
+              description={t(`${project.id}.description` as any)}
               tags={project.tags}
               links={project.links}
+              star={{
+                situation: t(`${project.id}.situation` as any),
+                task: t(`${project.id}.task` as any),
+                action: t(`${project.id}.action` as any),
+                result: t(`${project.id}.result` as any),
+              }}
               labels={{
                 viewProject: t("viewProject"),
                 github: t("github"),
                 perf: t("perf"),
-              }}
-              star={{
-                situation: t(`${project.id}.situation`),
-                task: t(`${project.id}.task`),
-                action: t(`${project.id}.action`),
-                result: t(`${project.id}.result`),
               }}
             />
           </motion.div>

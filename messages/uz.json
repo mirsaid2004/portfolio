@@ -1,0 +1,316 @@
+{
+  "HomePage": {
+    "title": "Loyiha Blank 2026",
+    "description": "Yuqori darajadagi, immersiv portfolio.",
+    "intro": "Salom, men Mirsaid. Dasturchiman va foydali raqamli mahsulotlar yarataman.",
+    "viewWork": "Ishlarimni Ko'rish"
+  },
+  "NotFound": {
+    "title": "404",
+    "subtitle": "Sahifa Topilmadi",
+    "description": "Siz qidirayotgan sahifa mavjud emas yoki ko'chirilgan.",
+    "backHome": "Bosh Sahifaga Qaytish"
+  },
+  "UnderConstruction": {
+    "title": "Qurilmoqda",
+    "subtitle": "Tez Orada!",
+    "description": "Sizga ajoyib narsalarni taqdim etish uchun qattiq ishlayapmiz. Bu sahifa hozirda qurilmoqda.",
+    "backHome": "Bosh Sahifaga Qaytish"
+  },
+  "ContactPage": {
+    "eyebrow": "BOG'LANISH",
+    "titleStart": "Keling,",
+    "titleHighlight": "kelajakni",
+    "titleEnd": "birga quramiz.",
+    "description": "Men hozirda frilans loyihalar va to'liq vaqtli ijodiy muhandislik rollari uchun mavjudman. Salom ayting!",
+    "emailLabel": "EMAIL",
+    "locationLabel": "JOYLASHUV",
+    "locationValue": "Global / Masofaviy",
+    "form": {
+      "nameLabel": "TO'LIQ ISM",
+      "namePlaceholder": "Aziz Valiyev",
+      "emailLabel": "EMAIL MANZIL",
+      "emailPlaceholder": "aziz@example.com",
+      "subjectLabel": "LOYIHA MAVZUSI",
+      "subjectPlaceholder": "Xizmatni tanlang",
+      "messageLabel": "XABAR",
+      "messagePlaceholder": "Tasavvuringizni amalga oshirishda qanday yordam bera olaman?",
+      "submitButton": "Xabar Yuborish"
+    }
+  },
+  "Navigation": {
+    "home": "Bosh Sahifa",
+    "work": "Loyihalar",
+    "about": "Men Haqimda",
+    "contact": "Bog'lanish"
+  },
+  "Bento": {
+    "available": "Loyihalar uchun mavjud",
+    "techStack": "Asosiy Stack",
+    "globalReady": "Global Tayyor",
+    "bioTitle": "Falsafa",
+    "bio": "Yuqori samarali, ochiq va hikoyaga asoslangan veb ilovalarni yaratish."
+  },
+  "Error": {
+    "title": "500",
+    "subtitle": "Nimadir Noto'g'ri Ketdi",
+    "description": "Kutilmagan xatolikka duch keldik. Iltimos, keyinroq qayta urinib ko'ring.",
+    "retry": "Qayta Urinish",
+    "backHome": "Bosh Sahifaga Qaytish"
+  },
+  "Projects": {
+    "title": "Tanlangan Ishlar",
+    "viewProject": "Loyihani Ko'rish",
+    "github": "Manba Kodi",
+    "perf": "Ishlash",
+    "project1": {
+      "title": "E-Commerce V2",
+      "description": "Eski e-com platformasini qayta qurdik.",
+      "situation": "Eski kod konversiyalarni sekinlashtirdi.",
+      "task": "Next.js ga ko'chirish va LCP ni optimallashtirish.",
+      "action": "ISR ni amalga oshirdik va rasmlarni optimallashtirdik.",
+      "result": "+40% Konversiya Darajasi, 100 Lighthouse Ball."
+    },
+    "project2": {
+      "title": "SaaS Boshqaruv Paneli",
+      "description": "Real vaqt tahlil paneli.",
+      "situation": "Foydalanuvchilarga real vaqt ma'lumotlarini vizualizatsiya qilish kerak edi.",
+      "task": "WebSockets bilan kengaytiriladigan boshqaruv panelini qurish.",
+      "action": "Recharts va Supabase Realtime dan foydalandik.",
+      "result": "10k+ bir vaqtda ulanishlarni qo'llab-quvvatlaydi."
+    }
+  },
+  "ProfileCard": {
+    "role": "Dasturchi",
+    "location": "Global / Masofaviy",
+    "downloadResume": "Rezyumeni Yuklab Olish",
+    "downloading": "Yuklanmoqda..."
+  },
+  "AboutStats": {
+    "sectionTitle": "Men Haqimda",
+    "sectionSubtitle": "Zamonaviy texnologiyalar va ijodiy yechimlar bilan raqamiy tajribalarni yaratish",
+    "headline": "Jonli his qiladigan raqamiy tajribalarni yaratish.",
+    "description": "Men immersiv raqamiy tajribalarni yaratishga e'tibor qaratgan dasturiy ta'minot muhandisiman. Hozirda dizayn va ishlab chiqish o'rtasidagi bo'shliqni bartaraf etish uchun zamonaviy veb texnologiyalari va eng yaxshi amaliyotlarni o'rganmoqdaman.",
+    "yearsExperience": "3+",
+    "yearsLabel": "YILLIK TAJRIBA",
+    "projects": "15+",
+    "projectsLabel": "ISHGA TUSHIRILGAN LOYIHALAR",
+    "modernStack": "Zamonaviy Stack",
+    "modernStackDesc": "Yuqori darajadagi veb ilovalar uchun Next.js, Tailwind, TypeScript va React.",
+    "performance": "Ishlash",
+    "performanceDesc": "Core Web Vitals va muammosiz 60fps o'zaro ta'sirlarni optimallashtirish.",
+    "systemDesign": "Tizim Dizayni",
+    "systemDesignDesc": "Kengaytiriladigan komponentlar va dizayn tizimlarini loyihalash.",
+    "motionDesign": "Harakat Dizayni",
+    "motionDesignDesc": "Foydalanuvchi intuitsiyasini yaxshilaydigan mazmunli animatsiyalarni yaratish."
+  },
+  "Experience": {
+    "sectionTitle": "Ish tajribasi",
+    "sectionSubtitle": "Masshtablanuvchi veb-ilovalarni yaratishdagi kasbiy yo'lim",
+    "present": "Hozir",
+    "jobs": {
+      "soff": {
+        "title": "Front-end dasturchi (Next.js)",
+        "company": "Soff.uz",
+        "period": "2025-yil oktyabr - 2026-yil fevral",
+        "description": "Soff, Soff Seller va Ilmiyish kabi bir nechta ishlab chiqarish ilovalari ustida ishladi",
+        "achievements": [
+          "Keshni bekor qilish va tozalashning samarali mexanizmi joriy etildi, bu ma'lumotlarning izchilligi va ilovalarning javob berishini yaxshilaydi",
+          "Muammolarni aniqlash va renderlash va ma'lumotlarni olish mantig'ini optimallashtirish orqali frontend ishlashi sezilarli darajada yaxshilandi",
+          "Eskirgan va strukturaga ega bo'lmagan kod bazalari qayta ishlab chiqildi, o'qish qulayligi, masshtablash imkoniyatini oshirish"
+        ]
+      },
+      "darmon": {
+        "title": "Front-end dasturchi (React/Next.js)",
+        "company": "DarmonServis.uz",
+        "period": "2024-yil avgust - 2025-yil may",
+        "description": "Darmonda servis ikkita loyiha ustida ishladi: Darmon servis internal CRM va Darmon Travel veb-sayti",
+        "achievements": [
+          "Murakkab tibbiy va ma'muriy ish jarayonlarini boshqarish uchun mo'ljallangan xususiy klinika uchun keng ko'lamli ERP tizimini ishlab chiqishga hissa qo'shdi",
+          "Ishlash qobiliyatini pasaytirmasdan katta ma'lumotlar to'plamlarini samarali ko'rsatish va boshqarish uchun ma'lumotlarni virtualizatsiya qilish texnikasini joriy qildi",
+          "Tez va aniq ma'lumotlarni boshqarishni qo'llab-quvvatlash uchun ilg'or sichqoncha o'zaro ta'siriga ega maxsus, murakkab jadval komponentini yaratdi"
+        ]
+      },
+      "itkey": {
+        "title": "Dasturiy ta'minot muhandisi (React/Node.js)",
+        "company": "IT-KEY",
+        "period": "2023-yil sentyabr - 2024-yil iyun",
+        "description": "Yirik rieltorlik kompaniyalari tomonidan qo'llaniladigan keng ko'lamli ko'chmas mulk CRM tizimini (RealEstateCRM) ishlab chiqdi",
+        "achievements": [
+          "Tizimni NewHouse.uz, KNT.uz va MegapolisBuxoro.uz (Buxoro) uchun muvaffaqiyatli joriy qildi",
+          "React deklarativ UI npm paketidan foydalangan holda murakkab, ma'lumotlarga asoslangan interfeyslarni yaratdi",
+          "Node.js da asinxron generator funktsiyalaridan foydalangan holda bloklamaydigan, samarali ma'lumotlarni olish mantig'ini joriy qildi, bu serverni bloklamasdan cheksiz miqyosli ma'lumotlarni yuklashni ta'minladi",
+          "Murakkab foydalanuvchi o'zaro ta'siri va dinamik xatti-harakatlarga ega yuqori darajada interaktiv korporativ va mahsulot veb-saytlarini yaratdi"
+        ]
+      },
+      "dynbek": {
+        "title": "Front-end dasturchi (React)",
+        "company": "Dynbek",
+        "period": "2022-yil dekabr - 2023-yil avgust",
+        "description": "Integratsiyalashgan CRM tizimiga ega markazlashtirilgan sartaroshxona boshqaruv tizimini ishlab chiqishda ishtirok etdi",
+        "achievements": [
+          "Asosiy frontend asoslarini mustahkamlab, UI kutubxonalariga tayanmasdan, moslashuvchan foydalanuvchi interfeyslarini yaratdi",
+          "Enigma UI shabloni asosida CRM interfeysi ustida ishladi, uni loyiha talablariga moslashtirdi va kengaytirdi",
+          "Haqiqiy loyiha ish oqimlari, jamoaviy hamkorlik va frontendning eng yaxshi amaliyotlari bo'yicha amaliy tajriba orttirdi"
+        ]
+      }
+    }
+  },
+  "TechStack": {
+    "sectionTitle": "Texnologiya Stacki",
+    "sectionSubtitle": "Ajoyib tajribalar yaratish uchun ishlatadigan texnologiyalar",
+    "categories": {
+      "language": "Til",
+      "frontend": "Frontend",
+      "framework": "Framework",
+      "backend": "Backend",
+      "styling": "Styling",
+      "versionControl": "Version Control",
+      "devops": "DevOps",
+      "processManager": "Jarayon Menejeri",
+      "cicd": "CI/CD",
+      "qa": "Sifat Nazorati"
+    }
+  },
+  "NpmContributions": {
+    "badge": "Ochiq Manba",
+    "sectionTitle": "NPM Hissasi",
+    "sectionSubtitle": "Dasturchilar jamoasi uchun qayta foydalaniladigan komponentlar va vositalar yaratish",
+    "keyFeatures": "Asosiy Xususiyatlar",
+    "downloads": "Yuklanishlar",
+    "version": "Versiya",
+    "viewOnNpm": "NPM da Ko'rish",
+    "viewSource": "Manba Kodini Ko'rish",
+    "morePackages": "Ko'proq paketlar tez orada! npm va GitHub da ishlarimni kuzatib boring",
+    "npmProfile": "NPM Profil"
+  },
+  "Contact": {
+    "getInTouch": "Bog'lanish",
+    "titleStart": "Keling, birga",
+    "titleHighlight": "ishlaymiz",
+    "description": "Loyiha haqida fikringiz bormi yoki shunchaki suhbatlashmoqchimisiz? Menga xabar yuboring va men tez orada sizga javob beraman.",
+    "emailLabel": "Email",
+    "locationLabel": "Joylashuv",
+    "locationValue": "Global / Masofaviy",
+    "form": {
+      "nameLabel": "Ismingiz",
+      "namePlaceholder": "Aziz Valiyev",
+      "emailLabel": "Email Manzil",
+      "emailPlaceholder": "aziz@example.com",
+      "subjectLabel": "Mavzu",
+      "subjectPlaceholder": "Mavzuni tanlang",
+      "messageLabel": "Xabar",
+      "messagePlaceholder": "Loyihangiz haqida gapirib bering...",
+      "submitButton": "Xabar Yuborish",
+      "sending": "Yuborilmoqda...",
+      "subjects": {
+        "freelance": "Frilans Loyiha",
+        "fulltime": "To'liq Vaqtli Ish",
+        "collaboration": "Hamkorlik",
+        "other": "Boshqa"
+      },
+      "validation": {
+        "nameMin": "Ism kamida 2 ta belgidan iborat bo'lishi kerak",
+        "nameMax": "Ism 50 ta belgidan kam bo'lishi kerak",
+        "nameRequired": "Ism talab qilinadi",
+        "emailInvalid": "Noto'g'ri email manzil",
+        "emailRequired": "Email talab qilinadi",
+        "subjectRequired": "Iltimos, mavzuni tanlang",
+        "messageMin": "Xabar kamida 10 ta belgidan iborat bo'lishi kerak",
+        "messageMax": "Xabar 500 ta belgidan kam bo'lishi kerak",
+        "messageRequired": "Xabar talab qilinadi"
+      },
+      "success": {
+        "title": "Xabar Yuborildi! 🎉",
+        "description": "Bog'langaningiz uchun rahmat! Men sizning xabaringizni oldim va imkon qadar tezroq sizga javob beraman.",
+        "button": "Tushundim!"
+      },
+      "error": "Voy! Nimadir noto'g'ri ketdi. Iltimos, qayta urinib ko'ring."
+    }
+  },
+  "ProjectsShowcase": {
+    "sectionTitle": "Tanlangan Loyihalar",
+    "sectionSubtitle": "Zamonaviy veb-ishlab chiqish, unumdorlikni optimallashtirish va kengaytiriladigan arxitekturadagi tajribamni ko'rsatuvchi loyihalar tanlovi",
+    "featured": "Tanlangan",
+    "viewLive": "Ko'rish",
+    "viewCode": "Kod",
+    "viewMoreProjects": "Ko'proq Loyihalar",
+    "projects": {
+      "soff": {
+        "description": "100 Lighthouse ballga ega yuqori samarali Next.js elektron tijorat platformasi",
+        "longDescription": "Next.js 14, React Server Components va Edge Runtime yordamida kengaytiriladigan elektron tijorat platformasi yaratildi. Ilg'or keshlash strategiyalari va optimallashtirilgan rasmlar Lighthouse balllarini mukammal natijaga olib keldi.",
+        "metrics": {
+          "performance": "Ishlash",
+          "conversion": "Konversiya",
+          "users": "Foydalanuvchilar"
+        }
+      },
+      "ilimiyish": {
+        "description": "10k+ bir vaqtda foydalanuvchilarni qo'llab-quvvatlovchi WebSocket boshqaruv paneli",
+        "longDescription": "WebSocket ulanishlari, Redis pub/sub va optimallashtirilgan React renderlash bilan real vaqt tahlil platformasi ishlab chiqildi. 100ms dan kam kechikish bilan massiv bir vaqtda ulanishlarni boshqaradi.",
+        "metrics": {
+          "concurrent": "Bir vaqtda",
+          "latency": "Kechikish",
+          "uptime": "Ishlash vaqti"
+        }
+      },
+      "realestatecrm": {
+        "description": "Aqlli keshlash bilan OpenAI asosidagi kontent yaratish vositasi",
+        "longDescription": "OpenAI API bilan integratsiyalashgan AI asosidagi kontent yaratish platformasi yaratildi. Optimal UX uchun aqlli keshlash, tezlikni cheklash va oqim javoblari joriy qilindi.",
+        "metrics": {
+          "response": "Javob",
+          "dailyUsers": "Kunlik foydalanuvchilar",
+          "savedTime": "Tejangan vaqt"
+        }
+      },
+      "ishora": {
+        "description": "Avtomatik joylashtirish bilan Jenkins + Docker orkestratsiyasi",
+        "longDescription": "Jenkins, Docker va Kubernetes yordamida keng qamrovli CI/CD quvur liniyasi boshqaruv tizimi yaratildi. Avtomatik joylashtirish chiqarish vaqtini 80% ga qisqartirdi.",
+        "metrics": {
+          "deployTime": "Joylashtirish vaqti",
+          "successRate": "Muvaffaqiyat darajasi",
+          "teams": "Jamoalar"
+        }
+      },
+      "darmonservis": {
+        "description": "100 Lighthouse ballga ega yuqori samarali Next.js elektron tijorat platformasi",
+        "longDescription": "Next.js 14, React Server Components va Edge Runtime yordamida kengaytiriladigan elektron tijorat platformasi yaratildi. Ilg'or keshlash strategiyalari va optimallashtirilgan rasmlar Lighthouse balllarini mukammal natijaga olib keldi.",
+        "metrics": {
+          "performance": "Ishlash",
+          "conversion": "Konversiya",
+          "users": "Foydalanuvchilar"
+        }
+      },
+      "darmontravel": {
+        "description": "10k+ bir vaqtda foydalanuvchilarni qo'llab-quvvatlovchi WebSocket boshqaruv paneli",
+        "longDescription": "WebSocket ulanishlari, Redis pub/sub va optimallashtirilgan React renderlash bilan real vaqt tahlil platformasi ishlab chiqildi. 100ms dan kam kechikish bilan massiv bir vaqtda ulanishlarni boshqaradi.",
+        "metrics": {
+          "concurrent": "Bir vaqtda",
+          "latency": "Kechikish",
+          "uptime": "Ishlash vaqti"
+        }
+      }
+    }
+  },
+  "Footer": {
+    "brandName": "M_DEV",
+    "brandDescription": "Chegaralarni kengaytiradigan raqamiy tajribalar yaratuvchi ijodiy texnolog. Zamonaviy veb-ishlab chiqish va interaktiv dizaynda mutaxassis.",
+    "navigationTitle": "Navigatsiya",
+    "resourcesTitle": "Resurslar",
+    "navigation": {
+      "home": "Bosh Sahifa",
+      "about": "Men Haqimda",
+      "projects": "Loyihalar",
+      "contact": "Bog'lanish"
+    },
+    "resources": {
+      "npmPackages": "NPM Paketlar",
+      "github": "GitHub",
+      "blog": "Blog",
+      "resume": "Rezyume"
+    },
+    "copyright": "M_Dev. Quyidagi bilan yaratilgan",
+    "using": "Next.js ishlatilgan",
+    "scrollToTop": "Yuqoriga"
+  }
+}

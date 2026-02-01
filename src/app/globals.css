@@ -115,4 +115,65 @@
   .dark .bg-dot-pattern {
     background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   }
+
+  /* Logo animation keyframes */
+  @keyframes renderFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes renderFromRight {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+  }
+
+  @keyframes renderFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes renderFromTop {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-from-left {
+    animation: renderFromLeft 500ms ease forwards;
+  }
+
+  .animate-from-right {
+    animation: renderFromRight 300ms ease forwards;
+  }
+
+  .animate-from-bottom {
+    animation: renderFromBottom 500ms ease forwards;
+  }
+
+  .animate-from-top {
+    animation: renderFromTop 300ms ease forwards;
+  }
 }
