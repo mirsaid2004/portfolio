@@ -17,6 +17,10 @@
     "description": "Sizga ajoyib narsalarni taqdim etish uchun qattiq ishlayapmiz. Bu sahifa hozirda qurilmoqda.",
     "backHome": "Bosh Sahifaga Qaytish"
   },
+  "PageLoader": {
+    "title": "Sahifa Yuklanmoqda",
+    "description": "Iltimos, biz sizga ajoyib narsalarni tayyorlayotganimizni kutib turing..."
+  },
   "ContactPage": {
     "eyebrow": "BOG'LANISH",
     "titleStart": "Keling,",

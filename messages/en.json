@@ -17,6 +17,10 @@
     "description": "We're working hard to bring you something amazing. This page is currently being built.",
     "backHome": "Return Home"
   },
+  "PageLoader": {
+    "title": "Loading Page",
+    "description": "Please wait while we prepare something amazing for you..."
+  },
   "ContactPage": {
     "eyebrow": "GET IN TOUCH",
     "titleStart": "Let's build the",
